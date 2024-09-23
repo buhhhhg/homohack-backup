@@ -1,5 +1,11 @@
 if getexecutorname():find("Wave") then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/incrimination/fvgfwe/main/bbb"))()
+    local s, r = pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/incrimination/fvgfwe/main/bbb"))() end)
+    if not s or not r then -- no this is not a mistake, im checking for 404 Not Found
+        local s, r = pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/buhhhhg/homohack-backup/refs/heads/main/wave-drawinglib.lua"))() end)
+        if not s or not r then
+            warn("No drawinglib for Wave!")
+        end
+    end
 end
 
 --// ui
