@@ -3,7 +3,8 @@ if getexecutorname():find("Wave") then
     if not s or not r then -- no this is not a mistake, im checking for 404 Not Found
         local s, r = pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/buhhhhg/homohack-backup/refs/heads/main/wave-drawinglib.lua"))() end)
         if not s or not r then
-            warn("No drawinglib for Wave!")
+            warn("No drawinglib for Wave found!")
+            return
         end
     end
 end
@@ -40,7 +41,7 @@ local knives = {
 --// tables
 
 local ui_window = library:CreateWindow({
-    Title = "homohack | made by @eldmonstret (dementia enjoyer)",
+    Title = "homohack | made by @eldmonstret",
     Center = true,
     AutoShow = true,
     TabPadding = 8,
